@@ -1,0 +1,5 @@
+This pitch file has moved to the `docs/` folder.
+
+Please find the full text pitch at: docs/PartTimePro_Pitch.txt
+
+And the founder pitch PDF at: PartimePro_Founder_Pitch_Script.pdf
