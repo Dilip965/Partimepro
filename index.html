@@ -11,19 +11,41 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
-                    <span class="text-2xl font-bold text-blue-600">PartTimePro</span>
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">PartTimePro</a>
                 </div>
+
+                <!-- Desktop menu -->
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
-                    <a href="#experience" class="text-gray-600 hover:text-blue-600">Experience</a>
-                    <a href="#skills" class="text-gray-600 hover:text-blue-600">Skills</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="experience.html" class="text-gray-600 hover:text-blue-600">Experience</a>
+                    <a href="skills.html" class="text-gray-600 hover:text-blue-600">Skills</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
                     <a href="PartimePro_Founder_Pitch_Script.pdf" download class="ml-4 inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
                         <i class="fas fa-file-download mr-2"></i>Download Pitch
                     </a>
                 </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="nav-toggle" aria-label="Open menu" class="p-2 rounded-md text-gray-600 hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-4 pt-4 pb-4 space-y-2">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600">Home</a>
+                <a href="experience.html" class="block text-gray-700 hover:text-blue-600">Experience</a>
+                <a href="skills.html" class="block text-gray-700 hover:text-blue-600">Skills</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="PartimePro_Founder_Pitch_Script.pdf" download class="mt-2 inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+                    <i class="fas fa-file-download mr-2"></i>Download Pitch
+                </a>
             </div>
         </div>
     </nav>
@@ -172,15 +194,15 @@
                             <div class="space-y-4">
                                 <p class="flex items-center justify-center md:justify-start text-gray-600">
                                     <i class="fas fa-envelope mr-3 text-blue-600"></i>
-                                    contact@example.com
+                                    dilip@partimepro.online
                                 </p>
                                 <p class="flex items-center justify-center md:justify-start text-gray-600">
                                     <i class="fas fa-phone mr-3 text-blue-600"></i>
-                                    (555) 123-4567
+                                   +91 9022504359
                                 </p>
                                 <p class="flex items-center justify-center md:justify-start text-gray-600">
                                     <i class="fas fa-map-marker-alt mr-3 text-blue-600"></i>
-                                    Your City, State
+                                    Bengaluru,Karnataka 
                                 </p>
                             </div>
                             <div class="mt-6 flex justify-center md:justify-start space-x-4">
@@ -208,5 +230,15 @@
             <p>&copy; 2025 PartTimePro. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        // Mobile nav toggle
+        (function(){
+            const btn = document.getElementById('nav-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu){
+                btn.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+            }
+        })();
+    </script>
 </body>
 </html>

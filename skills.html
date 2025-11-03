@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skills — PartTimePro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-lg fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex items-center">
+        <a href="index.html" class="text-2xl font-bold text-blue-600">PartTimePro</a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+        <a href="experience.html" class="text-gray-600 hover:text-blue-600">Experience</a>
+        <a href="skills.html" class="text-gray-600 hover:text-blue-600">Skills</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+        <a href="PartimePro_Founder_Pitch_Script.pdf" download class="ml-4 inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+          <i class="fas fa-file-download mr-2"></i>Download Pitch
+        </a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="nav-toggle" aria-label="Open menu" class="p-2 rounded-md text-gray-600 hover:bg-gray-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+    <div class="px-4 pt-4 pb-4 space-y-2">
+      <a href="index.html" class="block text-gray-700 hover:text-blue-600">Home</a>
+      <a href="experience.html" class="block text-gray-700 hover:text-blue-600">Experience</a>
+      <a href="skills.html" class="block text-gray-700 hover:text-blue-600">Skills</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-blue-600">Contact</a>
+      <a href="PartimePro_Founder_Pitch_Script.pdf" download class="mt-2 inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+        <i class="fas fa-file-download mr-2"></i>Download Pitch
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-24">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl font-bold text-gray-800">Key Skills</h1>
+      <p class="mt-2 text-gray-600">Core competencies and strengths relevant to part-time roles.</p>
+    </div>
+  </header>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white rounded-lg shadow p-6 text-center">
+        <div class="text-3xl text-blue-600 mb-3"><i class="fas fa-users"></i></div>
+        <h3 class="font-semibold">Team Collaboration</h3>
+        <p class="text-sm text-gray-500 mt-2">Worked effectively with cross-functional teams in fast-paced environments.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6 text-center">
+        <div class="text-3xl text-blue-600 mb-3"><i class="fas fa-clock"></i></div>
+        <h3 class="font-semibold">Time Management</h3>
+        <p class="text-sm text-gray-500 mt-2">Reliable scheduling and ability to balance multiple part-time roles.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6 text-center">
+        <div class="text-3xl text-blue-600 mb-3"><i class="fas fa-comments"></i></div>
+        <h3 class="font-semibold">Communication</h3>
+        <p class="text-sm text-gray-500 mt-2">Clear verbal and written communication with clients and teams.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6 text-center">
+        <div class="text-3xl text-blue-600 mb-3"><i class="fas fa-tasks"></i></div>
+        <h3 class="font-semibold">Project Management</h3>
+        <p class="text-sm text-gray-500 mt-2">Organized approach to short-term projects and shift planning.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gray-800 text-white py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p>&copy; 2025 PartTimePro. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  (function(){
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) btn.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+  })();
+</script>
+</body>
+</html>
