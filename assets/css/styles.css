@@ -20,3 +20,7 @@ a:focus, button:focus, input:focus, textarea:focus{outline:2px solid rgba(37,99,
 
 /* dark adjustments when using Tailwind's .dark class */
 :root.dark .card{--card-bg:#0b1220}
+
+/* Skip link (visible when focused) */
+.skip-link{position:fixed;left:1rem;top:1rem;padding:0.5rem 0.75rem;background:var(--brand);color:#fff;border-radius:0.375rem;transform:translateY(-120%);transition:transform .18s ease;z-index:60}
+.skip-link:focus{transform:translateY(0)}

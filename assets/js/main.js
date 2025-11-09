@@ -4,7 +4,18 @@
     const btn = document.getElementById('nav-toggle');
     const menu = document.getElementById('mobile-menu');
     if(btn && menu){
-      btn.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+      // ensure ARIA state is present
+      if(!btn.hasAttribute('aria-expanded')) btn.setAttribute('aria-expanded','false');
+      btn.addEventListener('click', ()=>{
+        const isHidden = menu.classList.toggle('hidden');
+        // when classList.toggle returns true it's now hidden; invert for expanded
+        btn.setAttribute('aria-expanded', (!isHidden).toString());
+        if(!isHidden){
+          // focus first focusable element in the menu for keyboard users
+          const firstLink = menu.querySelector('a, button, [tabindex]');
+          if(firstLink) firstLink.focus();
+        }
+      });
     }
   }
 
@@ -58,6 +69,23 @@
     }
   }
 
+  // Mark the current page link with aria-current="page" so screen readers know the active page
+  function initActiveLink(){
+    const currentFile = location.pathname.split('/').pop() || 'index.html';
+    const navLinks = Array.from(document.querySelectorAll('nav a'));
+    navLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      if(!href) return;
+      // consider links like 'index.html' or './index.html' or '/pages/index.html'
+      const linkFile = href.split('/').pop();
+      if(linkFile === currentFile || (currentFile === '' && linkFile === 'index.html')){
+        a.setAttribute('aria-current', 'page');
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', initNavToggle);
   } else {
@@ -67,7 +95,9 @@
   // also initialize theme toggle after DOM ready
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', initThemeToggle);
+    document.addEventListener('DOMContentLoaded', initActiveLink);
   } else {
     initThemeToggle();
+    initActiveLink();
   }
 })();
