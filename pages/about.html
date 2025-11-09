@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — PartTimePro</title>
+  <script>tailwind = window.tailwind || {}; tailwind.config = tailwind.config || {}; tailwind.config = Object.assign(tailwind.config, { darkMode: 'class' });</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <meta name="description" content="PartTimePro — professional part-time experience showcase. About the founder and mission.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="../assets/media/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:title" content="About — PartTimePro">
+  <meta property="og:description" content="About the founder and mission of PartTimePro.">
+  <meta property="og:image" content="/assets/media/favicon.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Dilip",
+      "jobTitle": "Founder"
+    }
+  }
+  </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+  <nav class="bg-white shadow-lg fixed w-full z-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center"><a href="index.html" class="text-2xl font-bold text-blue-600">PartTimePro</a></div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="about.html" class="text-gray-600 hover:text-blue-600">About</a>
+          <a href="projects.html" class="text-gray-600 hover:text-blue-600">Projects</a>
+          <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+          <a href="experience.html" class="text-gray-600 hover:text-blue-600">Experience</a>
+          <a href="skills.html" class="text-gray-600 hover:text-blue-600">Skills</a>
+          <a href="testimonials.html" class="text-gray-600 hover:text-blue-600">Testimonials</a>
+          <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+          <a href="../docs/PartimePro_Founder_Pitch_Script.pdf" download class="ml-4 inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"><i class="fas fa-file-download mr-2"></i>Download Pitch</a>
+          <button id="theme-toggle" class="ml-2 p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="md:hidden">
+          <button id="nav-toggle" aria-label="Open menu" class="p-2 rounded-md text-gray-600 hover:bg-gray-100"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+      <div class="px-4 pt-4 pb-4 space-y-2">
+        <a href="about.html" class="block text-gray-700 hover:text-blue-600">About</a>
+        <a href="projects.html" class="block text-gray-700 hover:text-blue-600">Projects</a>
+        <a href="index.html" class="block text-gray-700 hover:text-blue-600">Home</a>
+        <a href="experience.html" class="block text-gray-700 hover:text-blue-600">Experience</a>
+        <a href="skills.html" class="block text-gray-700 hover:text-blue-600">Skills</a>
+        <a href="testimonials.html" class="block text-gray-700 hover:text-blue-600">Testimonials</a>
+        <a href="contact.html" class="block text-gray-700 hover:text-blue-600">Contact</a>
+        <a href="../docs/PartimePro_Founder_Pitch_Script.pdf" download class="mt-2 inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"><i class="fas fa-file-download mr-2"></i>Download Pitch</a>
+        <div class="mt-2"><button id="theme-toggle-mobile" class="w-full p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100 flex items-center justify-center" aria-label="Toggle theme"><i class="fas fa-moon"></i></button></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24">
+    <section class="bg-gradient-to-r from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20">
+      <div class="container-max">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white">About PartTimePro</h1>
+            <p class="mt-4 text-gray-600 dark:text-gray-300">We help showcase reliable part-time talent with concise portfolios, case studies and a quick pitch. Founded with the mission of connecting short-term expertise to teams that need flexible support.</p>
+            <div class="mt-6 flex gap-4">
+              <a href="contact.html" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Hire Me</a>
+              <a href="../docs/PartimePro_Founder_Pitch_Script.pdf" download class="inline-flex items-center border border-gray-200 px-6 py-3 rounded-full">Download Pitch</a>
+            </div>
+          </div>
+          <div class="card p-6">
+            <h3 class="text-lg font-semibold">Founder — Dilip</h3>
+            <p class="text-gray-600 dark:text-gray-300 mt-3">Experienced in managing part-time roles across hospitality, tutoring and digital marketing. Passionate about building useful, accessible portfolios.</p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li>• 2+ years helping small teams</li>
+              <li>• 25+ part-time contracts completed</li>
+              <li>• Quick turnarounds and clear communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>&copy; 2025 PartTimePro. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
